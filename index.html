@@ -5,12 +5,13 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <table id="sudoku"></table>
         <div id="options">
-            <input type="checkbox" id="fill"><label for="fill">Auto Fill</label><br>
+            <h1>Sudoku Solver</h1>
+            <input type="checkbox" id="fill"><label for="fill" title="If a node has only one possibility, fill it in automatically">Auto Fill</label><br>
             <input type="button" id="solve" value="Solve Puzzle"><br>
             <input type="button" id="reset" value="Reset"><br>
         </div>
-        <table id="sudoku"></table>
 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="sudoku.js"></script>
