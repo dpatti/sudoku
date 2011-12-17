@@ -186,15 +186,17 @@ $(function(){
                 tuples[tup] = (tuples[tup] || 0) + 1
             });
             // check if any are sized appropriately
-            for (var str in tuples)
-                if (str.length == tuples[str])
+            for (var str in tuples) {
+                if (str.length == tuples[str]) {
                     // iterate over others in row
-                res.each(function(){
-                    if ($(this).find(".grid td:not(.ticked)").text() != str)
-                        // iterate over characters (digits) and tick
-                    for (var digit in str) 
-                        $(this).find(".grid td[mark="+str[digit]+"]").addClass("ticked");
-                });
+                    res.each(function(){
+                        if ($(this).find(".grid td:not(.ticked)").text() != str)
+                            // iterate over characters (digits) and tick
+                        for (var digit in str)
+                            $(this).find(".grid td[mark="+str[digit]+"]").addClass("ticked");
+                    });
+                }
+            }
         },
     ];
     var solveIter = function(){
